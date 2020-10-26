@@ -13,7 +13,7 @@
 
 /*Expected Output
 
-Create a variable named firstName and assign it a value of "your actual first name"
+Creates a variable named firstName and assign it a value of "your actual first name"
 Create a variable named lastName and assign it a value of "your actual last name"
 Create a variable named age and assign it a value of "your actual age"
 Create a variable named street and assign it a value of "some random street address"
