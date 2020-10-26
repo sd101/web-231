@@ -13,7 +13,7 @@
 
 /*Expected Output
 
-Create a variable named firstName1 and assign it a value of "James"
+Creates a variable named firstName1 and assign it a value of "James"
 Create a variable named firstName2 and assign it a value of "Jim"
 Create a variable named firstName3 and assign it a value of "Jake"
 Create a variable named lastName1 and assign it a value of "Liverman"
