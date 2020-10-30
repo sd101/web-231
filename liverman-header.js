@@ -1,14 +1,21 @@
 /*
 ============================================
-; Title:  header-test.js
+; Title:  header.js
 ; Author: Professor Krasso
 ; Date:   30 October 2020
 ; Modified By: James Liverman
-; Description: Displays a formatted header. Updated line 5 (Date)
-and 6 (Modified By). This file is for creating a personal header file.
+; Description: Displays a formatted header. Create a header for code.
 ;===========================================
 */
 
-const header = require('./header.js');
+/**
+* Params: firstName, lastName, assignment
+* Response: output
+* Description: Returns a well-formatted string header
+*/
+exports.display = function (firstName, lastName, assignment) {
+	let output = '\n' + firstName + ' ' + lastName + '\n' + assignment + '\nDate: ' +
+	new Date().toLocaleDateString('en-US')
 
-console.log(header.display("Robert", "Frost", "Week 2"));
+	return output
+}
