@@ -8,6 +8,6 @@
 ;===========================================
 */
 
-const header = require('./header.js');
+const header = require('../header.js');
 
 console.log(header.display("James", "Liverman", "Week 2 Exercise 2.2"));
