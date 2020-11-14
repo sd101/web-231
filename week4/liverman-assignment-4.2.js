@@ -7,7 +7,6 @@
 
 */
 
-/*
 const header = require("../liverman-header.js"); 
 console.log(header.display("James", "Liverman", "Discussion 4.2")); */
 
