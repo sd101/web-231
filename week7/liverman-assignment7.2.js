@@ -3,7 +3,7 @@
 ; Author: James Liverman
 ; Date: 05 December 2020
 ; Modified By: James Liverman
-; Description: This program demonstrates use of for loop.
+; Description: Create an constructor function called Employee
 
 Instructions 
 
