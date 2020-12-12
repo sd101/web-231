@@ -1,0 +1,133 @@
+<!--
+; Title: Assignment 8.3
+; Author: James Liverman
+; Date: 12 December 2020
+; Modified By: James Liverman
+; Description: jQuery defines simple event-registration methods for each commonly used and universally implemented browser events (Flanagan, 2011). To register these events, 
+you simply call the "event function" and pass-in the function you wish to execute.-->
+
+<!--
+
+Instructions
+
+Part A:
+Create an HTML paragraph and fill it with a paragraph of Lorem Ipsum data
+Give the HTML paragraph a title 
+Underneath the paragraph add an HTML button and name it "Toggle" 
+Using jQuery's "click" and "toggle" functions, register a click event for the "Toggle" button and show 
+or hide the paragraph each time the button is clicked
+Part B: 
+
+Create an HTML table of at least five (5) fruits with the following fields 
+ID 
+Type
+
+Using jQuery's "click" function, register a click event for the ID field and output the ID and Type of 
+the fruit to an alert window (user JavaScripts built-in alert() function)
+
+Apply the following CSS styling 
+Use Roboto: 300, 400, 500 for the font
+Apply alternate background colors for each table row (you must use pure CSS)
+Add a navbar (you must use pure CSS) and give it a different background color
+Have both sections appear 20px below the topbar
+Have both sections appear 20px to the left of the page  -->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style type="text/css">
+ table {margin-top:20px;}
+  tr:nth-child(even) {background: #CCC}
+  tr:nth-child(odd) {background: #FFF}
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+  body {
+      font-family: 'Roboto', 'Times New Roman', Times, serif; 
+  }
+
+  #navbar {
+  background-color: aqua;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+  section {
+  margin-left: 20px; 
+}
+
+  </style>
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+
+
+</head>
+<body>
+<div id="navbar">NAVBAR</div>
+<section>
+<h1>Lorem Ipsum</h1>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+  Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit 
+  amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit 
+  amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare 
+  sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+  us enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus 
+  faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
+  Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+<button id="button">Toggle</button> 
+
+<table class="alternate">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg">1</td>
+      <td class="tg">Banana</td>
+    </tr>
+    <tr>
+      <td class="tg">2</td>
+      <td class="tg">Apple</td>
+    </tr>
+    <tr>
+      <td class="tg">3</td>
+      <td class="tg">Peach</td>
+    </tr>
+    <tr>
+      <td class="tg">4</td>
+      <td class="tg">Plum</td>
+    </tr>
+    <tr>
+      <td class="tg">5</td>
+      <td class="tg">Pear</td>
+    </tr>
+  </tbody>
+  </table>
+</section>
+<script type="text/javascript">
+//Uses a Jquery function for html and waits until the page is loaded. Find all button on document
+// when click the button it will hide or show the paragraph.
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+//Using jQuery's "click" function, register a click event for the ID field and output the ID and Type of 
+//the fruit to an alert window (user JavaScripts built-in alert() function)
+$(document).ready(function() {
+    $(".tg").click(function(evt) {
+      let target = $(evt.target);
+      let id = target.text();
+      let type = target.next("td").text();
+      alert(id + " " + type);
+    })
+  })
+</script>
+
+</body>
+</html>
