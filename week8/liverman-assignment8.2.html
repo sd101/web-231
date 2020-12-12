@@ -1,0 +1,98 @@
+<!--
+; Title: Assignment 8.2
+; Author: James Liverman
+; Date: 12 December 2020
+; Modified By: James Liverman
+; Description: Find the letters div and the innerHTML function i& assigned the string variable out.-->
+
+<!--Instructions 
+Create an array of fruits with two fields 
+id 
+type
+Iterate over the array of fruits and output the results to the DOM in an unordered list
+Apply the following customizations/CSS rules
+Add a title to the unordered
+Center the unordered list (margin: 0 auto;) 
+Add a navbar (you must use pure CSS) and give it a different background color
+Have the unordered list appear 20px below the topbar
+Use Roboto: 300, 400, 500 for the font -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+
+  <style type="text/css">
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+body {
+    font-family: 'Roboto'; 
+}
+#navbar {
+  background-color: aqua;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+
+li {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li:hover {
+  background-color: #555;
+  color: white;
+}
+
+  </style>
+</head>
+  <body>
+    <div id="navbar">NAVBAR</div>
+    <div id="fruits">
+
+    </div>
+
+  <script>
+    // Creating a function called Fruit with two parameters named id and type.
+    function Fruit(id, type) {
+      this.id = id;
+      this.type = type;
+    }
+
+   //Create an array of variables called fruits 
+    var fruits = [
+     new Fruit(1, "Orange"),
+     new Fruit(2, "Apple"),
+     new Fruit(3, "Banana"),
+     new Fruit(4, "Strawberry"),
+                ]
+
+var output = "<ul><lh>Fruits</lh>";
+
+//Iterate over the array of fruits, for each instance of fruit add a new list item
+// with the array element added to each line
+    fruits.forEach(function (fruit){
+      output += "<li>" + fruit.id + " " + fruit.type + "</li>";
+      });
+// Add the unordered list closing tag.
+      output += "</ul>";
+
+// Show the results of the unordered list by finding id fruits and out putting as HTML.
+         
+  document.getElementById('fruits').innerHTML = output;  
+ 
+</script>
+
+</body>
+</html>
